@@ -1,2 +1,2 @@
-# custom-button
-Asample React component
+# Custom button component for React projects
+
