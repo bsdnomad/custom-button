@@ -1,5 +1,6 @@
 .idea
 .storybook
+docs
 node_modules
 src
 webpack.config.js

@@ -1,7 +1,7 @@
 const webpack               = require('webpack');
 const path                  = require('path');
 const UglifyJsPlugin        = require('uglifyjs-webpack-plugin');
-const CleanWebpackPlugin    = require('clean-webpack-plugin');
+const {CleanWebpackPlugin}  = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -30,6 +30,7 @@ module.exports = {
         minimizer: [new UglifyJsPlugin()]
     },
     plugins: [
-        new CleanWebpackPlugin(['dist'])
+        new webpack.ProgressPlugin(),
+        new CleanWebpackPlugin({verbose: true})
     ]
 }
